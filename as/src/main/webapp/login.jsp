@@ -30,10 +30,10 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top:50px;
-    margin-left: auto; /* Center the container horizontally */
-    margin-right: auto; /* Center the container horizontally */
-    width: 400px; /* Reduced width */
-    height: auto; /* Set height to auto to fit content */
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; 
+    height: auto; 
         }
 
         h2 {
@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures the header is above other content */
+    z-index: 1000; 
 }
 
 .header .logo img {
@@ -107,26 +107,25 @@
 }
 .adesh {
     
-    color: rgb(159, 67, 67); /* Set color for ADesh */
+    color: rgb(159, 67, 67); 
 }
 
 .services {
      letter-spacing: 1px;
-    color: rgb(88, 77, 77); /* Set color for services */
+    color: rgb(88, 77, 77);
 }
 .header {
-    display: flex; /* Use flexbox to align items in the header */
-    align-items: center; /* Vertically center items */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo {
-    display: flex; /* Use flexbox for logo and text */
-    align-items: center; /* Vertically align logo and text */
-}
+    display: flex; 
+    align-items: center; }
 
 .logo img {
-    height: 50px; /* Set a specific height for the logo image */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; 
+    width: auto; 
 }
 
 .logo-text {
@@ -134,8 +133,8 @@
     font-family:cursive;
     letter-spacing: 2px;
     word-spacing: 30px;
-    display: flex; /* Keep text inline */
-    margin-left: 10px; /* Add space between logo and text */
+    display: flex; 
+    margin-left: 10px;
      vertical-align: middle; 
      font-size: 25px;
      font-weight: bold;
@@ -181,7 +180,6 @@
     
 
         function cancelLogin() {
-            // Redirect to the homepage or previous page
             window.location.href = 'index.jsp'; 
         }
     </script>

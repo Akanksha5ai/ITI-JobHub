@@ -65,16 +65,11 @@ th {
 </head>
 <body>
     <%
-        // Retrieve the session object
         HttpSession httpsession = request.getSession(false);
         NewReg newReg = null;
-
-        // Check if the session is valid and retrieve employee details
         if (session != null) {
-            newReg = (NewReg) session.getAttribute("newReg"); // Assuming you stored employee object in session
+            newReg = (NewReg) session.getAttribute("newReg"); 
         }
-
-        // If employee is null, redirect to login page
         if (newReg == null) {
             response.sendRedirect("login.jsp");
             return;
@@ -103,7 +98,14 @@ th {
             </tr>
             
         </table>
-        <a href="logout.jsp" class="logout-button">Logout</a>
-    </div>
+       <a href="logout.jsp" class="logout-button" onclick="logout(event)">Logout</a>
+</div>
+<script>
+    function logout(event) {
+        event.preventDefault(); 
+        window.location.href = 'index.jsp'; 
+    }
+</script>
+  
 </body>
 </html>

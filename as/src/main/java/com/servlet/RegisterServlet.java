@@ -87,7 +87,6 @@ public class RegisterServlet extends HttpServlet {
 	    RequestDispatcher rd= request.getRequestDispatcher("Login.jsp");
 	    rd.forward(request, response);
 
-	    // Close session and factory
 	    session.close();
 	    sf.close();
 	}

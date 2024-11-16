@@ -87,7 +87,7 @@ form button:hover {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures the header is above other content */
+    z-index: 1000;
 }
 
 .header .logo img {
@@ -121,26 +121,26 @@ form button:hover {
 
 .adesh {
     
-    color: rgb(159, 67, 67); /* Set color for ADesh */
+    color: rgb(159, 67, 67); 
 }
 
 .services {
      letter-spacing: 1px;
-    color: rgb(88, 77, 77); /* Set color for services */
+    color: rgb(88, 77, 77); 
 }
 .header {
-    display: flex; /* Use flexbox to align items in the header */
-    align-items: center; /* Vertically center items */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo {
-    display: flex; /* Use flexbox for logo and text */
-    align-items: center; /* Vertically align logo and text */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo img {
-    height: 50px; /* Set a specific height for the logo image */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; 
+    width: auto; 
 }
 
 .logo-text {
@@ -148,8 +148,8 @@ form button:hover {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
     word-spacing: 30px;
-    display: flex; /* Keep text inline */
-    margin-left: 10px; /* Add space between logo and text */
+    display: flex; 
+    margin-left: 10px; 
      vertical-align: middle; 
      font-size: 25px;
      font-weight: bold;
@@ -158,28 +158,27 @@ form button:hover {
     width: 300px;
     height: 520px;
     margin-left: 50px;
-    padding: 20px; /* Add padding around the content */
-    background-color: #e8f0fe; /* Light blue background for visibility */
-    border: 1px solid #dddfe1; /* Light border for definition */
-    border-radius: 10px; /* Round corners */
-    margin-top: 90px; /* Space above the right section */
-}
+    padding: 20px; 
+    background-color: #e8f0fe; 
+    border: 1px solid #dddfe1; 
+    border-radius: 10px; 
+    margin-top: 90px; }
 
 .right h2 {
-    color: #2c3e50; /* Darker color for the heading */
-    font-size: 24px; /* Adjust font size as needed */
-    margin-bottom: 15px; /* Space below the heading */
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .right ul {
-    list-style-type: none; /* Use bullet points */
-    padding-left: 20px; /* Indent the list */
+    list-style-type: none;
+    padding-left: 20px;
 }
 
 .right ul li {
-    margin-bottom: 8px; /* Space between list items */
-    color: #34495e; /* Color for list items */
-    font-size: 16px; /* Adjust font size for list items */
+    margin-bottom: 8px; 
+    color: #34495e; 
+    font-size: 16px;
 }
 .right ul li:nth-child(1)::before {
     content: '✔';
@@ -194,10 +193,10 @@ form button:hover {
     margin-left: 3px;
     align-items: center;
     max-width: 250px; 
-    max-height: 400px;/* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is on a new line */
-    margin-bottom: 10px; /* Space between image and heading */
+    max-height: 400px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; 
 }
 .error {
             color: red;
@@ -287,33 +286,28 @@ form button:hover {
 
  <script>
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission until validation is done
+        event.preventDefault(); 
 
-        // Password and Confirm Password Validation
+ 
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmpassword').value;
 
         if (password !== confirmPassword) {
-            document.getElementById("errorMessage").style.display = "block"; // Show error message
-            return; // Prevent form submission
+            document.getElementById("errorMessage").style.display = "block"; 
+            return;
         } else {
-            document.getElementById("errorMessage").style.display = "none"; // Hide error message
+            document.getElementById("errorMessage").style.display = "none"; 
         }
-
-        // Retrieve Form Values
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const experience = document.getElementById('experience').value;
         const resume = document.getElementById('resume').files[0];
 
-        // Field Validation
         if (!name || !email || !phone || !experience || !resume) {
             alert('Please fill in all fields.');
             return;
         }
-
-        // Email and Phone Validation
         if (!validateEmail(email)) {
             alert('Please enter a valid email address.');
             return;
@@ -324,20 +318,19 @@ form button:hover {
             return;
         }
 
-        // Successful Submission Actions
         alert('Registration successful!');
-        //document.getElementById("registrationForm").reset(); // Clear form
+       
     });
 
-    // Validate Email Function
+
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
 
-    // Validate Phone Function
+
     function validatePhone(phone) {
-        const re = /^\d{10}$/; // Checks for a 10-digit phone number
+        const re = /^\d{10}$/; 
         return re.test(phone);
     }
 </script>

@@ -19,7 +19,6 @@
                 height: 100%;
                 font-family: Arial, sans-serif;
                 scroll-behavior: smooth;
-                /* Smooth scrolling effect */
             }
 
             .main {
@@ -47,53 +46,42 @@
                 padding: 10px 20px;
                 background-color: white;
                 position: fixed;
-                /* Keep navbar at the top */
                 top: 0;
                 z-index: 1000;
             }
 
             .navbar.logo {
                 display: flex;
-                /* Use flexbox for logo and text */
                 align-items: center;
-                /* Vertically align logo and text */
             }
 
 
             .adesh {
 
                 color: rgb(159, 67, 67);
-                /* Set color for ADesh */
             }
 
             .services {
                 letter-spacing: 1px;
                 color: rgb(88, 77, 77);
-                /* Set color for services */
             }
 
             .navbar {
                 display: flex;
-                /* Use flexbox to align items in the header */
                 align-items: center;
-                /* Vertically center items */
             }
 
             .logo {
                 display: flex;
-                /* Use flexbox for logo and text */
                 align-items: center;
-                /* Vertically align logo and text */
             }
 
             .logo img {
                 height: 50px;
-                /* Set a specific height for the logo image */
                 width: auto;
                 height: 115px;
                 object-fit: contain;
                 left: 0;
-                /* Maintain aspect ratio */
             }
 
             .logo-text {
@@ -102,9 +90,7 @@
                 letter-spacing: 2px;
                 word-spacing: 30px;
                 display: flex;
-                /* Keep text inline */
                 margin-left: 10px;
-                /* Add space between logo and text */
                 vertical-align: middle;
 
                 font-size: 25px;
@@ -145,28 +131,18 @@
             .login-btn,
             .register-btn {
                 display: inline-block;
-                /* Allows padding and margin */
                 padding: 10px 20px;
-                /* Add some padding */
                 background-color: #007bff;
-                /* Button background color */
                 color: white;
-                /* Text color */
                 text-align: center;
-                /* Center the text */
                 text-decoration: none;
-                /* Remove underline */
                 border-radius: 5px;
-                /* Rounded corners */
                 border: none;
-                /* Remove border */
                 cursor: pointer;
-                /* Change cursor to pointer */
             }
 
             .register-btn:hover {
                 background-color: #0056b3;
-                /* Darker background on hover */
             }
 
             .login-btn:hover {
@@ -175,19 +151,14 @@
 
             section {
                 padding-top: 100px;
-                /* Increased padding to make space for the navbar */
                 padding-bottom: 50px;
-                /* Optional: Extra space at the bottom */
                 min-height: 100vh;
-                /* Full viewport height */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
 
             }
-
-            /* Home Section Styling */
             #home {
                 display: flex;
                 flex-direction: column;
@@ -196,7 +167,7 @@
                 text-align: left;
                 height: 100vh;
                 background-image: url('finalbg.jpg');
-                /* Replace with the path to your background image */
+               
                 background-size: cover;
                 background-position: center;
                 color: #fffdfe;
@@ -213,9 +184,9 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.6);
-                /* Dark overlay with opacity */
+               
                 backdrop-filter: blur(100px);
-                /* Adjust the blur radius */
+          
                 z-index: -1;
             }
 
@@ -240,13 +211,13 @@
 
             #home h3{
                 margin-top: 80px;
-           color: #fefefe; /* Base neon color */
+           color: #fefefe; 
           
     text-shadow: 
-        0 0 5px #1f5bd1,   /* Outer glow */
+        0 0 5px #1f5bd1,   
         0 0 10px #9fb3da, 
         0 0 20px #1f5bd1, 
-        0 0 30px rgb(11, 78, 140),     /* Brighter inner glow */
+        0 0 30px rgb(11, 78, 140),   
         0 0 40px rgb(11, 78, 140),
         0 0 50px rgb(11, 78, 140);
 
@@ -277,7 +248,6 @@
                 transform: scale(1.05);
             }
 
-            /* Rotating Tagline */
             .rotating-text {
            
                 font-size: 1.2em;
@@ -326,7 +296,6 @@
                 }
             }
 
-            /* Rotating Text Animation */
             @keyframes rotateText {
 
                 0%,
@@ -362,8 +331,7 @@
                 align-items: center;
                 justify-content: center;
                 background-color: #f9f9f9;
-                /* Set a background color if desired */
-
+                
             }
 
             #about h1 {
@@ -426,60 +394,59 @@
                 margin: 8px auto 20px;
                 border-radius: 2px;
             }
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    height: 560px;
+    overflow: hidden;
+}
 
-            .slider {
-                position: relative;
-                width: 100%;
-                max-width: 800px;
-                margin: 20px auto;
-                overflow: hidden;
-                border: 2px solid #ccc;
-                border-radius: 10px;
-            }
+.slides {
+    display: flex;
+    animation: slideAnimation 12s infinite;
+}
 
-            .slides {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
+.slide {
+    min-width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
 
-            .slide {
-                min-width: 100%;
-            }
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
-            .slide img {
-                width: 100%;
-                height: 100%;
-                /* Ensures image fills the slider container */
-                object-fit: cover;
-                border-radius: 10px;
-            }
-
-            .prev,
-            .next {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: rgba(255, 255, 255, 0.7);
-                border: none;
-                padding: 10px;
-                cursor: pointer;
-                border-radius: 5px;
-                z-index: 10;
-            }
-
-            .prev {
-                left: 10px;
-            }
-
-            .next {
-                right: 10px;
-            }
-
-            .prev:hover,
-            .next:hover {
-                background-color: #ddd;
-                /* Highlight on hover */
-            }
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
             #contact a {
                 transition: color 0.3s;
@@ -600,16 +567,27 @@
             <section id="services">
                 <h1>Our Services</h1>
                 <p>Details about the services we offer.</p>
-                <div class="slider">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <div class="slides">
-                        <div class="slide"><img src="1.jpg" alt="Image 1"></div>
-                        <div class="slide"><img src="2.jpg" alt="Image 2"></div>
-                        <div class="slide"><img src="3.jpg" alt="Image 3"></div>
-                        <div class="slide"><img src="4.jpg" alt="Image 4"></div>
-                    </div>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
+               <div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="images/millingoperatorr.jpg" alt="Image 1">
+            <div class="title">Milling Operator</div>
+        </div>
+        <div class="slide">
+            <img src="images/turnerr.jpg" alt="Image 2">
+            <div class="title">Turner</div>
+        </div>
+        <div class="slide">
+            <img src="images/grinderr.jpg" alt="Image 3">
+            <div class="title">Grinder</div>
+        </div>
+        <div class="slide">
+            <img src="images/helperr.jpg" alt="Image 4">
+            <div class="title">Helper</div>
+        </div>
+    </div>
+</div>
+
 
             </section>
 
@@ -656,37 +634,7 @@
                     </a>
                 </div>
             </section>
-
-
-
-
         </div>
-
-        <script>
-
-            let currentSlide = 0;
-
-            function changeSlide(direction) {
-                const slides = document.querySelectorAll('.slide');
-                const totalSlides = slides.length;
-
-                currentSlide += direction;
-
-                // Loop through slides
-                if (currentSlide < 0) currentSlide = totalSlides - 1; // If currentSlide goes below 0, go to last slide
-                if (currentSlide >= totalSlides) currentSlide = 0; // If currentSlide exceeds totalSlides, go to first slide
-
-                updateSlides();
-            }
-
-            function updateSlides() {
-                const slidesContainer = document.querySelector('.slides');
-                // Translate the slides based on the currentSlide index
-                slidesContainer.style.transform = translateX(-${ currentSlide * 100} %);
-            }
-
-        </script>
-
     </body>
 
     </html>
