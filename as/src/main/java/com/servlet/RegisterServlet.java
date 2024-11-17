@@ -84,8 +84,7 @@ public class RegisterServlet extends HttpServlet {
 		session.save(newreg);
 	    tx.commit();
 
-	    RequestDispatcher rd= request.getRequestDispatcher("Login.jsp");
-	    rd.forward(request, response);
+	    response.sendRedirect("login.jsp");
 
 	    session.close();
 	    sf.close();
